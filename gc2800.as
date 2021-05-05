@@ -4161,7 +4161,7 @@ return
 if peek(stack(0),1) & (0x40){}else{
 wpoke stack(0),10,gc2800readmem16(wpeek(stack(0),12))
 wpoke stack(0),12,wpeek(stack(0),12)+2
-if gc2800cpuusmodecld(threadidforrunthegc2800)=1{gc2800cpuusmode(threadidforrunthegc2800)=gc2800cpuusmodebak(threadidforrunthegc2800):gc2800cpuusmodecld(threadidforrunthegc2800)=0}
+if gc2800cpuusmodecld(threadidforrunthegc2800)=1{lpoke stack(0),16,lpeek(stack(0),24):gc2800cpuusmode(threadidforrunthegc2800)=gc2800cpuusmodebak(threadidforrunthegc2800):gc2800cpuusmodecld(threadidforrunthegc2800)=0}
 }
 return
 *opcode_c1
@@ -4220,13 +4220,13 @@ return
 if peek(stack(0),1) & (0x40){
 wpoke stack(0),10,gc2800readmem16(wpeek(stack(0),12))
 wpoke stack(0),12,wpeek(stack(0),12)+2
-if gc2800cpuusmodecld(threadidforrunthegc2800)=1{gc2800cpuusmode(threadidforrunthegc2800)=gc2800cpuusmodebak(threadidforrunthegc2800):gc2800cpuusmodecld(threadidforrunthegc2800)=0}
+if gc2800cpuusmodecld(threadidforrunthegc2800)=1{lpoke stack(0),16,lpeek(stack(0),24):gc2800cpuusmode(threadidforrunthegc2800)=gc2800cpuusmodebak(threadidforrunthegc2800):gc2800cpuusmodecld(threadidforrunthegc2800)=0}
 }
 return
 *opcode_c9
 wpoke stack(0),10,gc2800readmem16(wpeek(stack(0),12))
 wpoke stack(0),12,wpeek(stack(0),12)+2
-if gc2800cpuusmodecld(threadidforrunthegc2800)=1{gc2800cpuusmode(threadidforrunthegc2800)=gc2800cpuusmodebak(threadidforrunthegc2800):gc2800cpuusmodecld(threadidforrunthegc2800)=0}
+if gc2800cpuusmodecld(threadidforrunthegc2800)=1{lpoke stack(0),16,lpeek(stack(0),24):gc2800cpuusmode(threadidforrunthegc2800)=gc2800cpuusmodebak(threadidforrunthegc2800):gc2800cpuusmodecld(threadidforrunthegc2800)=0}
 return
 *opcode_ca
 if peek(stack(0),1) & (0x40){
@@ -5301,7 +5301,7 @@ return
 if peek(stack(0),1) & (0x01){}else{
 wpoke stack(0),10,gc2800readmem16(wpeek(stack(0),12))
 wpoke stack(0),12,wpeek(stack(0),12)+2
-if gc2800cpuusmodecld(threadidforrunthegc2800)=1{gc2800cpuusmode(threadidforrunthegc2800)=gc2800cpuusmodebak(threadidforrunthegc2800):gc2800cpuusmodecld(threadidforrunthegc2800)=0}
+if gc2800cpuusmodecld(threadidforrunthegc2800)=1{lpoke stack(0),16,lpeek(stack(0),24):gc2800cpuusmode(threadidforrunthegc2800)=gc2800cpuusmodebak(threadidforrunthegc2800):gc2800cpuusmodecld(threadidforrunthegc2800)=0}
 }
 return
 *opcode_d1
@@ -5372,7 +5372,7 @@ return
 if peek(stack(0),1) & (0x01){
 wpoke stack(0),10,gc2800readmem16(wpeek(stack(0),12))
 wpoke stack(0),12,wpeek(stack(0),12)+2
-if gc2800cpuusmodecld(threadidforrunthegc2800)=1{gc2800cpuusmode(threadidforrunthegc2800)=gc2800cpuusmodebak(threadidforrunthegc2800):gc2800cpuusmodecld(threadidforrunthegc2800)=0}
+if gc2800cpuusmodecld(threadidforrunthegc2800)=1{lpoke stack(0),16,lpeek(stack(0),24):gc2800cpuusmode(threadidforrunthegc2800)=gc2800cpuusmodebak(threadidforrunthegc2800):gc2800cpuusmodecld(threadidforrunthegc2800)=0}
 }
 return
 *opcode_d9
@@ -7755,7 +7755,7 @@ return
 if (peek(stack(0),1) & (0x04)){}else{
 wpoke stack(0),10,gc2800readmem16(wpeek(stack(0),12))
 wpoke stack(0),12,wpeek(stack(0),12)+2
-if gc2800cpuusmodecld(threadidforrunthegc2800)=1{gc2800cpuusmode(threadidforrunthegc2800)=gc2800cpuusmodebak(threadidforrunthegc2800):gc2800cpuusmodecld(threadidforrunthegc2800)=0}
+if gc2800cpuusmodecld(threadidforrunthegc2800)=1{lpoke stack(0),16,lpeek(stack(0),24):gc2800cpuusmode(threadidforrunthegc2800)=gc2800cpuusmodebak(threadidforrunthegc2800):gc2800cpuusmodecld(threadidforrunthegc2800)=0}
 }
 return
 *opcode_e1
@@ -7821,7 +7821,7 @@ return
 if (peek(stack(0),1) & (0x04)){
 wpoke stack(0),10,gc2800readmem16(wpeek(stack(0),12))
 wpoke stack(0),12,wpeek(stack(0),12)+2
-if gc2800cpuusmodecld(threadidforrunthegc2800)=1{gc2800cpuusmode(threadidforrunthegc2800)=gc2800cpuusmodebak(threadidforrunthegc2800):gc2800cpuusmodecld(threadidforrunthegc2800)=0}
+if gc2800cpuusmodecld(threadidforrunthegc2800)=1{lpoke stack(0),16,lpeek(stack(0),24):gc2800cpuusmode(threadidforrunthegc2800)=gc2800cpuusmodebak(threadidforrunthegc2800):gc2800cpuusmodecld(threadidforrunthegc2800)=0}
 }
 return
 *opcode_e9
@@ -7852,6 +7852,365 @@ wpoke stack(0),10,wpeek(stack(0),10)+1
 gosub opcodeaddr_ed(opcodeforsubcall)
 poke stack(0),14,peek(stack(0),14)+1
 return
+*opcode_ed_00
+if gc2800cpuusmode(threadidforrunthegc2800)=0{
+#ifdef gc2800memaccess
+addressforgc2800rwmads=gc2800readmem(wpeek(stack(0),10))
+gc2800memaccess (addressforgc2800rwmads & 0xFFFF),0,3
+gc2800stature=stat
+poke stack(0),3,gc2800stature
+poke stack(0),1,(peek(stack(0),1) & 0x01) | SZP(gc2800stature)
+#else
+iomemorycalled=2
+iomemorycalledid=gc2800readmem(wpeek(stack(0),10))
+iomemorycalledid16=gc2800readmem(wpeek(stack(0),10))
+//await 100
+/*if peek(iomemory,peek(stack(0),2))=0{poke stack(0),1,peek(stack(0),1) ^ (0x40)}
+if peek(iomemory,peek(stack(0),2))>=128{poke stack(0),1,peek(stack(0),1) ^ (0x80)}*/
+_gc2800iomemorycalledid@=iomemorycalledid16:_gc2800iomemorycalled@=iomemorycalled:gosub gc2800iochecklabel2
+poke stack(0),1,(peek(stack(0),1) & 0x01) | SZP(peek(iomemory,gc2800readmem(wpeek(stack(0),10))))
+poke stack(0),3,peek(iomemory,gc2800readmem(wpeek(stack(0),10)))
+#endif
+}
+wpoke stack(0),10,wpeek(stack(0),10)+1
+return
+*opcode_ed_01
+if gc2800cpuusmode(threadidforrunthegc2800)=0{
+#ifdef gc2800memaccess
+addressforgc2800rwmads=gc2800readmem(wpeek(stack(0),10))
+gc2800memaccess (addressforgc2800rwmads & 0xFFFF),peek(stack(0),3),2
+#else
+poke iomemory,gc2800readmem(wpeek(stack(0),10)),peek(stack(0),3)
+iomemorycalled=1
+iomemorycalledid=gc2800readmem(wpeek(stack(0),10))
+iomemorycalledid16=gc2800readmem(wpeek(stack(0),10))
+_gc2800iomemorycalledid@=iomemorycalledid16:_gc2800iomemorycalled@=iomemorycalled:gosub gc2800iochecklabel2
+#endif
+}
+wpoke stack(0),10,wpeek(stack(0),10)+1
+return
+*opcode_ed_02
+if gc2800cpuusmode(threadidforrunthegc2800)=0{
+lpoke stack(0),20,gc2800readmem16(wpeek(stack(0),10))|(gc2800readmem16(wpeek(stack(0),10)+2)<<16)
+}
+wpoke stack(0),10,wpeek(stack(0),10)+4
+return
+*opcode_ed_03
+if gc2800cpuusmode(threadidforrunthegc2800)=0{
+gc2800writemem16 gc2800readmem16(wpeek(stack(0),10))+0,wpeek(stack(0),20)
+gc2800writemem16 gc2800readmem16(wpeek(stack(0),10))+2,wpeek(stack(0),22)
+wpoke stack(0),10,wpeek(stack(0),10)+4
+}else{wpoke stack(0),10,wpeek(stack(0),10)+4}
+return
+
+*opcode_ed_07
+wpoke stack(0),28,gc2800readmem16(wpeek(stack(0),10))
+wpoke stack(0),10,wpeek(stack(0),10)+2
+return
+*opcode_ed_08
+if gc2800cpuusmode(threadidforrunthegc2800)=0{
+#ifdef gc2800memaccess
+addressforgc2800rwmads=gc2800readmem(wpeek(stack(0),10))
+gc2800memaccess (addressforgc2800rwmads & 0xFFFF),0,3
+gc2800stature=stat
+poke stack(0),2,gc2800stature
+poke stack(0),1,(peek(stack(0),1) & 0x01) | SZP(gc2800stature)
+#else
+iomemorycalled=2
+iomemorycalledid=gc2800readmem(wpeek(stack(0),10))
+iomemorycalledid16=gc2800readmem(wpeek(stack(0),10))
+//await 100
+/*if peek(iomemory,peek(stack(0),2))=0{poke stack(0),1,peek(stack(0),1) ^ (0x40)}
+if peek(iomemory,peek(stack(0),2))>=128{poke stack(0),1,peek(stack(0),1) ^ (0x80)}*/
+_gc2800iomemorycalledid@=iomemorycalledid16:_gc2800iomemorycalled@=iomemorycalled:gosub gc2800iochecklabel2
+poke stack(0),1,(peek(stack(0),1) & 0x01) | SZP(peek(iomemory,gc2800readmem(wpeek(stack(0),10))))
+poke stack(0),2,peek(iomemory,gc2800readmem(wpeek(stack(0),10)))
+#endif
+}
+wpoke stack(0),10,wpeek(stack(0),10)+1
+return
+*opcode_ed_09
+if gc2800cpuusmode(threadidforrunthegc2800)=0{
+#ifdef gc2800memaccess
+addressforgc2800rwmads=gc2800readmem(wpeek(stack(0),10))
+gc2800memaccess (addressforgc2800rwmads & 0xFFFF),peek(stack(0),2),2
+#else
+poke iomemory,gc2800readmem(wpeek(stack(0),10)),peek(stack(0),2)
+iomemorycalled=1
+iomemorycalledid=gc2800readmem(wpeek(stack(0),10))
+iomemorycalledid16=gc2800readmem(wpeek(stack(0),10))
+_gc2800iomemorycalledid@=iomemorycalledid16:_gc2800iomemorycalled@=iomemorycalled:gosub gc2800iochecklabel2
+#endif
+}
+wpoke stack(0),10,wpeek(stack(0),10)+1
+return
+*opcode_ed_0A
+goto *opcode_ed_02
+return
+*opcode_ed_0B
+if gc2800cpuusmode(threadidforrunthegc2800)=0{
+gc2800segmenttmp=gc2800readmem16(gc2800readmem16(wpeek(stack(0),10))+0)|(gc2800readmem16(gc2800readmem16(wpeek(stack(0),10))+2)<<16)
+wpoke stack(0),20,(gc2800segmenttmp)&0xFFFF
+wpoke stack(0),22,(gc2800segmenttmp>>16)&0xFFFF
+}
+wpoke stack(0),10,wpeek(stack(0),10)+4
+return
+
+*opcode_ed_0F
+goto *opcode_ed_07
+return
+*opcode_ed_10
+if gc2800cpuusmode(threadidforrunthegc2800)=0{
+#ifdef gc2800memaccess
+addressforgc2800rwmads=gc2800readmem(wpeek(stack(0),10))
+gc2800memaccess (addressforgc2800rwmads & 0xFFFF),0,3
+gc2800stature=stat
+poke stack(0),5,gc2800stature
+poke stack(0),1,(peek(stack(0),1) & 0x01) | SZP(gc2800stature)
+#else
+iomemorycalled=2
+iomemorycalledid=gc2800readmem(wpeek(stack(0),10))
+iomemorycalledid16=gc2800readmem(wpeek(stack(0),10))
+//await 100
+/*if peek(iomemory,peek(stack(0),2))=0{poke stack(0),1,peek(stack(0),1) ^ (0x40)}
+if peek(iomemory,peek(stack(0),2))>=128{poke stack(0),1,peek(stack(0),1) ^ (0x80)}*/
+_gc2800iomemorycalledid@=iomemorycalledid16:_gc2800iomemorycalled@=iomemorycalled:gosub gc2800iochecklabel2
+poke stack(0),1,(peek(stack(0),1) & 0x01) | SZP(peek(iomemory,gc2800readmem(wpeek(stack(0),10))))
+poke stack(0),5,peek(iomemory,gc2800readmem(wpeek(stack(0),10)))
+#endif
+}
+wpoke stack(0),10,wpeek(stack(0),10)+1
+return
+*opcode_ed_11
+if gc2800cpuusmode(threadidforrunthegc2800)=0{
+#ifdef gc2800memaccess
+addressforgc2800rwmads=gc2800readmem(wpeek(stack(0),10))
+gc2800memaccess (addressforgc2800rwmads & 0xFFFF),peek(stack(0),5),2
+#else
+poke iomemory,gc2800readmem(wpeek(stack(0),10)),peek(stack(0),5)
+iomemorycalled=1
+iomemorycalledid=gc2800readmem(wpeek(stack(0),10))
+iomemorycalledid16=gc2800readmem(wpeek(stack(0),10))
+_gc2800iomemorycalledid@=iomemorycalledid16:_gc2800iomemorycalled@=iomemorycalled:gosub gc2800iochecklabel2
+#endif
+}
+wpoke stack(0),10,wpeek(stack(0),10)+1
+return
+*opcode_ed_12
+if gc2800cpuusmode(threadidforrunthegc2800)=0{
+lpoke stack(0),24,gc2800readmem16(wpeek(stack(0),10))|(gc2800readmem16(wpeek(stack(0),10)+2)<<16)
+}
+wpoke stack(0),10,wpeek(stack(0),10)+4
+return
+*opcode_ed_13
+if gc2800cpuusmode(threadidforrunthegc2800)=0{
+gc2800writemem16 gc2800readmem16(wpeek(stack(0),10))+0,wpeek(stack(0),24)
+gc2800writemem16 gc2800readmem16(wpeek(stack(0),10))+2,wpeek(stack(0),26)
+wpoke stack(0),10,wpeek(stack(0),10)+4
+}else{wpoke stack(0),10,wpeek(stack(0),10)+4}
+return
+
+*opcode_ed_18
+if gc2800cpuusmode(threadidforrunthegc2800)=0{
+#ifdef gc2800memaccess
+addressforgc2800rwmads=gc2800readmem(wpeek(stack(0),10))
+gc2800memaccess (addressforgc2800rwmads & 0xFFFF),0,3
+gc2800stature=stat
+poke stack(0),4,gc2800stature
+poke stack(0),1,(peek(stack(0),1) & 0x01) | SZP(gc2800stature)
+#else
+iomemorycalled=2
+iomemorycalledid=gc2800readmem(wpeek(stack(0),10))
+iomemorycalledid16=gc2800readmem(wpeek(stack(0),10))
+//await 100
+/*if peek(iomemory,peek(stack(0),2))=0{poke stack(0),1,peek(stack(0),1) ^ (0x40)}
+if peek(iomemory,peek(stack(0),2))>=128{poke stack(0),1,peek(stack(0),1) ^ (0x80)}*/
+_gc2800iomemorycalledid@=iomemorycalledid16:_gc2800iomemorycalled@=iomemorycalled:gosub gc2800iochecklabel2
+poke stack(0),1,(peek(stack(0),1) & 0x01) | SZP(peek(iomemory,gc2800readmem(wpeek(stack(0),10))))
+poke stack(0),4,peek(iomemory,gc2800readmem(wpeek(stack(0),10)))
+#endif
+}
+wpoke stack(0),10,wpeek(stack(0),10)+1
+return
+*opcode_ed_19
+if gc2800cpuusmode(threadidforrunthegc2800)=0{
+#ifdef gc2800memaccess
+addressforgc2800rwmads=gc2800readmem(wpeek(stack(0),10))
+gc2800memaccess (addressforgc2800rwmads & 0xFFFF),peek(stack(0),4),2
+#else
+poke iomemory,gc2800readmem(wpeek(stack(0),10)),peek(stack(0),4)
+iomemorycalled=1
+iomemorycalledid=gc2800readmem(wpeek(stack(0),10))
+iomemorycalledid16=gc2800readmem(wpeek(stack(0),10))
+_gc2800iomemorycalledid@=iomemorycalledid16:_gc2800iomemorycalled@=iomemorycalled:gosub gc2800iochecklabel2
+#endif
+}
+wpoke stack(0),10,wpeek(stack(0),10)+1
+return
+*opcode_ed_1A
+goto *opcode_ed_12
+return
+*opcode_ed_1B
+if gc2800cpuusmode(threadidforrunthegc2800)=0{
+gc2800segmenttmp=gc2800readmem16(gc2800readmem16(wpeek(stack(0),10))+0)|(gc2800readmem16(gc2800readmem16(wpeek(stack(0),10))+2)<<16)
+wpoke stack(0),24,(gc2800segmenttmp)&0xFFFF
+wpoke stack(0),26,(gc2800segmenttmp>>16)&0xFFFF
+}
+wpoke stack(0),10,wpeek(stack(0),10)+4
+return
+
+*opcode_ed_20
+if gc2800cpuusmode(threadidforrunthegc2800)=0{
+#ifdef gc2800memaccess
+addressforgc2800rwmads=gc2800readmem(wpeek(stack(0),10))
+gc2800memaccess (addressforgc2800rwmads & 0xFFFF),0,3
+gc2800stature=stat
+poke stack(0),7,gc2800stature
+poke stack(0),1,(peek(stack(0),1) & 0x01) | SZP(gc2800stature)
+#else
+iomemorycalled=2
+iomemorycalledid=gc2800readmem(wpeek(stack(0),10))
+iomemorycalledid16=gc2800readmem(wpeek(stack(0),10))
+//await 100
+/*if peek(iomemory,peek(stack(0),2))=0{poke stack(0),1,peek(stack(0),1) ^ (0x40)}
+if peek(iomemory,peek(stack(0),2))>=128{poke stack(0),1,peek(stack(0),1) ^ (0x80)}*/
+_gc2800iomemorycalledid@=iomemorycalledid16:_gc2800iomemorycalled@=iomemorycalled:gosub gc2800iochecklabel2
+poke stack(0),1,(peek(stack(0),1) & 0x01) | SZP(peek(iomemory,gc2800readmem(wpeek(stack(0),10))))
+poke stack(0),7,peek(iomemory,gc2800readmem(wpeek(stack(0),10)))
+#endif
+}
+wpoke stack(0),10,wpeek(stack(0),10)+1
+return
+*opcode_ed_21
+if gc2800cpuusmode(threadidforrunthegc2800)=0{
+#ifdef gc2800memaccess
+addressforgc2800rwmads=gc2800readmem(wpeek(stack(0),10))
+gc2800memaccess (addressforgc2800rwmads & 0xFFFF),peek(stack(0),7),2
+#else
+poke iomemory,gc2800readmem(wpeek(stack(0),10)),peek(stack(0),7)
+iomemorycalled=1
+iomemorycalledid=gc2800readmem(wpeek(stack(0),10))
+iomemorycalledid16=gc2800readmem(wpeek(stack(0),10))
+_gc2800iomemorycalledid@=iomemorycalledid16:_gc2800iomemorycalled@=iomemorycalled:gosub gc2800iochecklabel2
+#endif
+}
+wpoke stack(0),10,wpeek(stack(0),10)+1
+return
+
+*opcode_ed_28
+if gc2800cpuusmode(threadidforrunthegc2800)=0{
+#ifdef gc2800memaccess
+addressforgc2800rwmads=gc2800readmem(wpeek(stack(0),10))
+gc2800memaccess (addressforgc2800rwmads & 0xFFFF),0,3
+gc2800stature=stat
+poke stack(0),6,gc2800stature
+poke stack(0),1,(peek(stack(0),1) & 0x01) | SZP(gc2800stature)
+#else
+iomemorycalled=2
+iomemorycalledid=gc2800readmem(wpeek(stack(0),10))
+iomemorycalledid16=gc2800readmem(wpeek(stack(0),10))
+//await 100
+/*if peek(iomemory,peek(stack(0),2))=0{poke stack(0),1,peek(stack(0),1) ^ (0x40)}
+if peek(iomemory,peek(stack(0),2))>=128{poke stack(0),1,peek(stack(0),1) ^ (0x80)}*/
+_gc2800iomemorycalledid@=iomemorycalledid16:_gc2800iomemorycalled@=iomemorycalled:gosub gc2800iochecklabel2
+poke stack(0),1,(peek(stack(0),1) & 0x01) | SZP(peek(iomemory,gc2800readmem(wpeek(stack(0),10))))
+poke stack(0),6,peek(iomemory,gc2800readmem(wpeek(stack(0),10)))
+#endif
+}
+wpoke stack(0),10,wpeek(stack(0),10)+1
+return
+*opcode_ed_29
+if gc2800cpuusmode(threadidforrunthegc2800)=0{
+#ifdef gc2800memaccess
+addressforgc2800rwmads=gc2800readmem(wpeek(stack(0),10))
+gc2800memaccess (addressforgc2800rwmads & 0xFFFF),peek(stack(0),6),2
+#else
+poke iomemory,gc2800readmem(wpeek(stack(0),10)),peek(stack(0),6)
+iomemorycalled=1
+iomemorycalledid=gc2800readmem(wpeek(stack(0),10))
+iomemorycalledid16=gc2800readmem(wpeek(stack(0),10))
+_gc2800iomemorycalledid@=iomemorycalledid16:_gc2800iomemorycalled@=iomemorycalled:gosub gc2800iochecklabel2
+#endif
+}
+wpoke stack(0),10,wpeek(stack(0),10)+1
+return
+
+*opcode_ed_30
+if gc2800cpuusmode(threadidforrunthegc2800)=0{
+#ifdef gc2800memaccess
+addressforgc2800rwmads=gc2800readmem(wpeek(stack(0),10))
+gc2800memaccess (addressforgc2800rwmads & 0xFFFF),0,3
+gc2800stature=stat
+//poke stack(0),1,gc2800stature
+poke stack(0),1,(peek(stack(0),1) & 0x01) | SZP(gc2800stature)
+#else
+iomemorycalled=2
+iomemorycalledid=gc2800readmem(wpeek(stack(0),10))
+iomemorycalledid16=gc2800readmem(wpeek(stack(0),10))
+//await 100
+/*if peek(iomemory,peek(stack(0),2))=0{poke stack(0),1,peek(stack(0),1) ^ (0x40)}
+if peek(iomemory,peek(stack(0),2))>=128{poke stack(0),1,peek(stack(0),1) ^ (0x80)}*/
+_gc2800iomemorycalledid@=iomemorycalledid16:_gc2800iomemorycalled@=iomemorycalled:gosub gc2800iochecklabel2
+poke stack(0),1,(peek(stack(0),1) & 0x01) | SZP(peek(iomemory,gc2800readmem(wpeek(stack(0),10))))
+//poke stack(0),1,peek(iomemory,gc2800readmem(wpeek(stack(0),10)))
+#endif
+}
+wpoke stack(0),10,wpeek(stack(0),10)+1
+return
+*opcode_ed_31
+if gc2800cpuusmode(threadidforrunthegc2800)=0{
+#ifdef gc2800memaccess
+addressforgc2800rwmads=gc2800readmem(wpeek(stack(0),10))
+gc2800memaccess (addressforgc2800rwmads & 0xFFFF),peek(stack(0),1),2
+#else
+poke iomemory,gc2800readmem(wpeek(stack(0),10)),peek(stack(0),1)
+iomemorycalled=1
+iomemorycalledid=gc2800readmem(wpeek(stack(0),10))
+iomemorycalledid16=gc2800readmem(wpeek(stack(0),10))
+_gc2800iomemorycalledid@=iomemorycalledid16:_gc2800iomemorycalled@=iomemorycalled:gosub gc2800iochecklabel2
+#endif
+}
+wpoke stack(0),10,wpeek(stack(0),10)+1
+return
+
+*opcode_ed_38
+if gc2800cpuusmode(threadidforrunthegc2800)=0{
+#ifdef gc2800memaccess
+addressforgc2800rwmads=gc2800readmem(wpeek(stack(0),10))
+gc2800memaccess (addressforgc2800rwmads & 0xFFFF),0,3
+gc2800stature=stat
+poke stack(0),0,gc2800stature
+poke stack(0),1,(peek(stack(0),1) & 0x01) | SZP(gc2800stature)
+#else
+iomemorycalled=2
+iomemorycalledid=gc2800readmem(wpeek(stack(0),10))
+iomemorycalledid16=gc2800readmem(wpeek(stack(0),10))
+//await 100
+/*if peek(iomemory,peek(stack(0),2))=0{poke stack(0),1,peek(stack(0),1) ^ (0x40)}
+if peek(iomemory,peek(stack(0),2))>=128{poke stack(0),1,peek(stack(0),1) ^ (0x80)}*/
+_gc2800iomemorycalledid@=iomemorycalledid16:_gc2800iomemorycalled@=iomemorycalled:gosub gc2800iochecklabel2
+poke stack(0),1,(peek(stack(0),1) & 0x01) | SZP(peek(iomemory,gc2800readmem(wpeek(stack(0),10))))
+poke stack(0),0,peek(iomemory,gc2800readmem(wpeek(stack(0),10)))
+#endif
+}
+wpoke stack(0),10,wpeek(stack(0),10)+1
+return
+*opcode_ed_39
+if gc2800cpuusmode(threadidforrunthegc2800)=0{
+#ifdef gc2800memaccess
+addressforgc2800rwmads=gc2800readmem(wpeek(stack(0),10))
+gc2800memaccess (addressforgc2800rwmads & 0xFFFF),peek(stack(0),0),2
+#else
+poke iomemory,gc2800readmem(wpeek(stack(0),10)),peek(stack(0),0)
+iomemorycalled=1
+iomemorycalledid=gc2800readmem(wpeek(stack(0),10))
+iomemorycalledid16=gc2800readmem(wpeek(stack(0),10))
+_gc2800iomemorycalledid@=iomemorycalledid16:_gc2800iomemorycalled@=iomemorycalled:gosub gc2800iochecklabel2
+#endif
+}
+wpoke stack(0),10,wpeek(stack(0),10)+1
+return
+
 *opcode_ed_40
 if gc2800cpuusmode(threadidforrunthegc2800)=0{
 #ifdef gc2800memaccess
@@ -8480,10 +8839,14 @@ return
 gc2800cpuusmodebak(threadidforrunthegc2800)=gc2800cpuusmode(threadidforrunthegc2800)
 gc2800cpuusmodecld(threadidforrunthegc2800)=1
 gc2800cpuusmode(threadidforrunthegc2800)=0
+gc2800syscallnostk=gc2800readmem16(wpeek(stack(0),10))
+lpoke stack(0),24,lpeek(stack(0),16)
+lpoke stack(0),16,lpeek(stack(0),20)
 wpoke stack(0),12,wpeek(stack(0),12)-2
 gc2800writemem16 wpeek(stack(0),12),wpeek(stack(0),10)+2
 wpoke stack(0),12,wpeek(stack(0),12)-2
-gc2800writemem16 wpeek(stack(0),12),gc2800readmem16(wpeek(stack(0),10))
+gc2800writemem16 wpeek(stack(0),12),gc2800syscallnostk
+wpoke stack(0),10,wpeek(stack(0),28)
 /*#ifdef gc2800memaccess
 addressforgc2800rwmads=wpeek(stack(0),2)
 gc2800memaccess (addressforgc2800rwmads & 0xFFFF),0,2
@@ -9151,64 +9514,38 @@ lpoke stack(0),16,gc2800segbak
 }else{wpoke stack(0),10,wpeek(stack(0),10)+4+2}
 return
 
-*opcode_ed_00
-*opcode_ed_01
-*opcode_ed_02
-*opcode_ed_03
 *opcode_ed_04
 *opcode_ed_05
 *opcode_ed_06
-*opcode_ed_07
-*opcode_ed_08
-*opcode_ed_09
-*opcode_ed_0A
-*opcode_ed_0B
 *opcode_ed_0C
 *opcode_ed_0D
 *opcode_ed_0E
-*opcode_ed_0F
-*opcode_ed_10
-*opcode_ed_11
-*opcode_ed_12
-*opcode_ed_13
 *opcode_ed_14
 *opcode_ed_15
 *opcode_ed_16
 *opcode_ed_17
-*opcode_ed_18
-*opcode_ed_19
-*opcode_ed_1A
-*opcode_ed_1B
 *opcode_ed_1C
 *opcode_ed_1D
 *opcode_ed_1E
 *opcode_ed_1F
-*opcode_ed_20
-*opcode_ed_21
 *opcode_ed_22
 *opcode_ed_23
 *opcode_ed_24
 *opcode_ed_25
 *opcode_ed_26
 *opcode_ed_27
-*opcode_ed_28
-*opcode_ed_29
 *opcode_ed_2A
 *opcode_ed_2B
 *opcode_ed_2C
 *opcode_ed_2D
 *opcode_ed_2E
 *opcode_ed_2F
-*opcode_ed_30
-*opcode_ed_31
 *opcode_ed_32
 *opcode_ed_33
 *opcode_ed_34
 *opcode_ed_35
 *opcode_ed_36
 *opcode_ed_37
-*opcode_ed_38
-*opcode_ed_39
 *opcode_ed_3A
 *opcode_ed_3B
 *opcode_ed_3C
@@ -9355,7 +9692,7 @@ return
 if (peek(stack(0),1) & (0x80)){}else{
 wpoke stack(0),10,gc2800readmem16(wpeek(stack(0),12))
 wpoke stack(0),12,wpeek(stack(0),12)+2
-if gc2800cpuusmodecld(threadidforrunthegc2800)=1{gc2800cpuusmode(threadidforrunthegc2800)=gc2800cpuusmodebak(threadidforrunthegc2800):gc2800cpuusmodecld(threadidforrunthegc2800)=0}
+if gc2800cpuusmodecld(threadidforrunthegc2800)=1{lpoke stack(0),16,lpeek(stack(0),24):gc2800cpuusmode(threadidforrunthegc2800)=gc2800cpuusmodebak(threadidforrunthegc2800):gc2800cpuusmodecld(threadidforrunthegc2800)=0}
 }
 return
 *opcode_f1
@@ -9423,7 +9760,7 @@ return
 if (peek(stack(0),1) & (0x80)){
 wpoke stack(0),10,gc2800readmem16(wpeek(stack(0),12))
 wpoke stack(0),12,wpeek(stack(0),12)+2
-if gc2800cpuusmodecld(threadidforrunthegc2800)=1{gc2800cpuusmode(threadidforrunthegc2800)=gc2800cpuusmodebak(threadidforrunthegc2800):gc2800cpuusmodecld(threadidforrunthegc2800)=0}
+if gc2800cpuusmodecld(threadidforrunthegc2800)=1{lpoke stack(0),16,lpeek(stack(0),24):gc2800cpuusmode(threadidforrunthegc2800)=gc2800cpuusmodebak(threadidforrunthegc2800):gc2800cpuusmodecld(threadidforrunthegc2800)=0}
 }
 return
 *opcode_f9
